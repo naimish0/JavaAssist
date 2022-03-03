@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
             CtMethod addnewMethod = CtNewMethod.make("public int newlyMethod(int dx){x+=dx;}", ctClass);
             ctClass.addMethod(addnewMethod);
             ctClass.toClass();
-            Calculator calculator = new Calculator();
+            Calculator calculator = new Calculator();                          //reference https://www.javassist.org/tutorial/tutorial.html
             String msg = calculator.simpleMethod();
             System.out.println(msg);
         } catch (NotFoundException | CannotCompileException e) {
